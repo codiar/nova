@@ -1,0 +1,259 @@
+<!--
+تم تطوير هذا المشروع خصيصًا للعميل بواسطة فريق كوديار تك | Codiar Tech.
+هذا الكود من إنتاج كوديار تك ويُرجى عدم إزالة هذه الترويسة حفاظاً على حقوق التطوير.
+Instagram:
+@codiar.tech
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA CAFE | نوفا كافيه</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Intro Animation -->
+    <div id="intro">
+        <img src="1000027446.png" alt="Nova Cafe Logo" class="intro-logo-img">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="1000027446.png" alt="NOVA" style="height: 40px; filter: invert(1);">
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#menu">المنيو</a></li>
+                <li><a href="#features">مميزاتنا</a></li>
+                <li><a href="#about">عن نوفا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+
+            <div class="mobile-menu-btn" id="mobile-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+
+        <div class="container hero-content">
+            <h1 class="hero-title">NOVA CAFE</h1>
+            <p class="hero-subtitle">حيث تلتقي القهوة بالفن الهندسي. تجربة استثنائية تأخذك إلى أبعاد جديدة من المذاق.</p>
+            <div class="btn-group">
+                <a href="#menu" class="btn btn-primary"><i class="fas fa-compass"></i> استكشف المنيو</a>
+                <a href="#contact" class="btn btn-outline"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <h2 class="section-title reveal">قائمة نوفا</h2>
+            <p class="section-subtitle reveal">اختر مشروبك المفضل من قائمتنا المتنوعة</p>
+
+            <div class="menu-categories reveal">
+                <button class="category-btn active" data-filter="all">الكل</button>
+                <button class="category-btn" data-filter="hot">ساخن 🔥</button>
+                <button class="category-btn" data-filter="cold">بارد 🧊</button>
+                <button class="category-btn" data-filter="freeze">فريز ❄️</button>
+                <button class="category-btn" data-filter="icetea">شاي مثلج 🍹</button>
+                <button class="category-btn" data-filter="turkish">قهوة تركية ☕</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- ============ HOT DRINKS ============ -->
+                <div class="menu-card glass reveal" data-category="hot">
+                    <h3 class="menu-title">اسبريسو</h3>
+                    <p class="menu-desc">جرعة مكثفة من القهوة الخالصة.</p>
+                    <div class="menu-price">2,000 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('اسبريسو', '2,000 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="hot">
+                    <h3 class="menu-title">سبانيش لاتيه</h3>
+                    <p class="menu-desc">مزيج من الإسبريسو والحليب المحلى.</p>
+                    <div class="menu-price">3,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('سبانيش لاتيه', '3,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="hot">
+                    <h3 class="menu-title">كورتادو</h3>
+                    <p class="menu-desc">توازن مثالي بين الإسبريسو والحليب المبخر.</p>
+                    <div class="menu-price">3,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('كورتادو', '3,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="hot">
+                    <h3 class="menu-title">فلات وايت</h3>
+                    <p class="menu-desc">قهوة غنية مع طبقة رقيقة من الحليب المبخر.</p>
+                    <div class="menu-price">4,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('فلات وايت', '4,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+
+                <!-- ============ COLD DRINKS ============ -->
+                <div class="menu-card glass reveal" data-category="cold">
+                    <h3 class="menu-title">آيس امريكانو</h3>
+                    <p class="menu-desc">قهوة امريكانو منعشة بالثلج.</p>
+                    <div class="menu-price">2,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('آيس امريكانو', '2,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="cold">
+                    <h3 class="menu-title">آيس سبانيش لاتيه</h3>
+                    <p class="menu-desc">سبانيش لاتيه بارد ومنعش.</p>
+                    <div class="menu-price">3,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('آيس سبانيش لاتيه', '3,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="cold">
+                    <h3 class="menu-title">آيس كراميل ماكياتو</h3>
+                    <p class="menu-desc">مزيج الحليب والقهوة مع الكراميل والثلج.</p>
+                    <div class="menu-price">3,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('آيس كراميل ماكياتو', '3,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="cold">
+                    <h3 class="menu-title">بستاشيو بارد</h3>
+                    <p class="menu-desc">مشروب بارد بنكهة الفستق الغنية.</p>
+                    <div class="menu-price">4,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('بستاشيو بارد', '4,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+
+                <!-- ============ FREEZE ============ -->
+                <div class="menu-card glass reveal" data-category="freeze">
+                    <h3 class="menu-title">أوريو فريز</h3>
+                    <p class="menu-desc">مشروب مثلج منعش بقطع الأوريو.</p>
+                    <div class="menu-price">4,000 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('أوريو فريز', '4,000 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="freeze">
+                    <h3 class="menu-title">نوتيلا فريز</h3>
+                    <p class="menu-desc">فريز غني بشوكولاتة النوتيلا اللذيذة.</p>
+                    <div class="menu-price">4,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('نوتيلا فريز', '4,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="freeze">
+                    <h3 class="menu-title">كندر فريز</h3>
+                    <p class="menu-desc">مشروب مثلج بنكهة شوكولاتة كندر.</p>
+                    <div class="menu-price">4,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('كندر فريز', '4,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+
+                <!-- ============ ICE TEA ============ -->
+                <div class="menu-card glass reveal" data-category="icetea">
+                    <h3 class="menu-title">شاي مثلج بالخوخ</h3>
+                    <p class="menu-desc">شاي بارد منعش بنكهة الخوخ الطبيعية.</p>
+                    <div class="menu-price">3,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('شاي مثلج بالخوخ', '3,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="icetea">
+                    <h3 class="menu-title">شاي مثلج بالتوت</h3>
+                    <p class="menu-desc">شاي بارد منعش بنكهة التوت.</p>
+                    <div class="menu-price">3,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('شاي مثلج بالتوت', '3,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+
+                <!-- ============ TURKISH ============ -->
+                <div class="menu-card glass reveal" data-category="turkish">
+                    <h3 class="menu-title">قهوة تركية سادة</h3>
+                    <p class="menu-desc">قهوة تركية أصلية محضرة على الأصول.</p>
+                    <div class="menu-price">2,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('قهوة تركية سادة', '2,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+                <div class="menu-card glass reveal" data-category="turkish">
+                    <h3 class="menu-title">قهوة تركية بالهيل</h3>
+                    <p class="menu-desc">قهوة تركية وسط مع نكهة الهيل العطرة.</p>
+                    <div class="menu-price">2,500 د.ع</div>
+                    <button class="btn btn-primary btn-order" onclick="orderViaWhatsapp('قهوة تركية بالهيل', '2,500 د.ع')">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </button>
+                </div>
+            </div>
+            
+            <p class="reveal" style="text-align: center; color: var(--text-muted); margin-top: 30px; font-size: 0.9rem;">
+                * توصيل منتجاتنا المثلجة يتم بتعبئة المنتج بالعلبة (المكينه) حفاظاً على المنتج. وإضافة 500 دينار على سعر المنتج.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid reveal">
+                <div>
+                    <h3 class="footer-title">عن NOVA</h3>
+                    <p class="menu-desc">مساحتك الخاصة للاستمتاع بقهوة استثنائية، مصممة بعناية لترضي ذائقتك الفاخرة وسط أجواء هندسية فريدة.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/NOVACAFE.1" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/NOVACAFE" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <p class="menu-desc"><i class="fas fa-phone"></i> 07736427608</p>
+                    <p class="menu-desc"><i class="fab fa-instagram"></i> @NOVACAFE.1</p>
+                    <p class="menu-desc"><i class="fab fa-facebook"></i> NOVACAFE</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 NOVA CAFE. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
+<!--
+تم تطوير هذا المشروع خصيصًا للعميل بواسطة فريق كوديار تك | Codiar Tech.
+هذا الكود من إنتاج كوديار تك ويُرجى عدم إزالة هذه الترويسة حفاظاً على حقوق التطوير.
+Instagram:
+@codiar.tech
+-->
